@@ -1,4 +1,4 @@
-name: Compiler SCSS en CSS
+name: SCSS Build & Deploy
 
 on:
   push:
@@ -7,30 +7,45 @@ on:
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
 jobs:
-  build-css:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Cloner le dépôt
+      - name: Clone repository
         uses: actions/checkout@v3
 
-      - name: Installer Node.js
+      - name: Install Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 20
 
-      - name: Installer Dart Sass
+      - name: Install Sass
         run: npm install -g sass
 
-      - name: Compiler SCSS en CSS
+      - name: Compile SCSS
         run: sass scss/styles.scss css/styles.css
 
-      - name: Commit et push du CSS compilé
-        run: |
-          git config --global user.name "GitHub Actions"
-          git config --global user.email "actions@github.com"
-          git add css/styles.css
-          git commit -m "Compile SCSS en CSS via GitHub Actions" || echo "Pas de changements à commit"
-          git push
+      - name: Save files for deployment
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: .  
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy on Github Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
