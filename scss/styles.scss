@@ -1,0 +1,83 @@
+// Var
+$primary-color: #3498db;
+$secondary-color: #2c3e50;
+$text-color: #333;
+$font-stack: 'Segoe UI', sans-serif;
+
+// Mixins
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+// Reset
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-stack;
+  color: $text-color;
+  background-color: #f9f9f9;
+  line-height: 1.6;
+}
+
+header {
+  background-color: $primary-color;
+  color: white;
+  padding: 1rem 0;
+
+  h1 {
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+
+  nav ul {
+    @include center;
+    list-style: none;
+    gap: 1.5rem;
+
+    li a {
+      color: white;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+main {
+  @include container;
+
+  section {
+    background-color: white;
+    padding: 2rem;
+    margin-top: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+
+  h2 {
+    margin-bottom: 1rem;
+    color: $secondary-color;
+  }
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #eee;
+  color: #666;
+  margin-top: 2rem;
+}
