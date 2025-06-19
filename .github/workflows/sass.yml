@@ -1,9 +1,8 @@
-name: SCSS Build & Deploy
+name: Build SCSS & Deploy to GitHub Pages
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
 
 permissions:
   contents: write
@@ -19,10 +18,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Clone repository
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Install Node.js
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
@@ -30,21 +29,13 @@ jobs:
       - name: Install Sass
         run: npm install -g sass
 
-      - name: Compile SCSS
+      - name: Compile SCSS to CSS in public/css/
         run: sass scss/styles.scss public/css/styles.css
 
-      - name: Save files for deployment
+      - name: Upload public folder for GitHub Pages
         uses: actions/upload-pages-artifact@v3
         with:
           path: public
-      - name: compiled CSS Commit and push
-        run: |
-          git config --global user.name "GitHub Actions"
-          git config --global user.email "actions@github.com"
-          git add public/css/styles.css
-          git commit -m "Compile SCSS via GitHub Actions" || echo "No modif"
-          git push
-
 
   deploy:
     needs: build
@@ -54,6 +45,6 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
-      - name: Deploy on Github Pages
+      - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
