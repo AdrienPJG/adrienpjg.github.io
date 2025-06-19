@@ -31,12 +31,12 @@ jobs:
         run: npm install -g sass
 
       - name: Compile SCSS
-        run: sass scss/styles.scss css/styles.css
+        run: sass scss/styles.scss public/css/styles.css
 
       - name: Save files for deployment
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: public
       - name: compiled CSS Commit and push
         run: |
           git config --global user.name "GitHub Actions"
