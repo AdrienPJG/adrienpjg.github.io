@@ -6,13 +6,13 @@
 
 body {
   font-family: "Segoe UI", sans-serif;
-  color: #333;
-  background-color: #f9f9f9;
+  color: #FFFFFF;
+  background-color: #2812EE;
   line-height: 1.6;
 }
 
 header {
-  background-color: #3498db;
+  background-color: #1296EE;
   color: white;
   padding: 1rem 0;
 }
@@ -49,7 +49,7 @@ main section {
 }
 main h2 {
   margin-bottom: 1rem;
-  color: #2c3e50;
+  color: #1296EE;
 }
 
 footer {
