@@ -1,8 +1,9 @@
 // Var 
-$primary-color: #2812EE;
-$secondary-color: #1296EE;
+$primary-color: #004AAD; //Bleu cobalt
+$secondary-color: #38B6FF; //Bleu clair
+$tertiary-color: #F6F6F6; //Gris clair
 $text-color: #FFFFFF;
-$font-stack: 'Segoe UI', sans-serif;
+$font-stack: 'Verdana', sans-serif;
 
 // Mixins
 @mixin center {
@@ -22,17 +23,17 @@ $font-stack: 'Segoe UI', sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: $font-stack;
 }
 
 body {
-  font-family: $font-stack;
   color: $text-color;
-  background-color: $primary-color;
+  background-color: $secondary-color;
   line-height: 1.6;
 }
 
 header {
-  background-color: $secondary-color;
+  background-color: $primary-color;
   color: white;
   padding: 1rem 0;
 
@@ -45,9 +46,10 @@ header {
     @include center;
     list-style: none;
     gap: 1.5rem;
+    background-color: white;
 
     li a {
-      color: white;
+      color: black;
       text-decoration: none;
 
       &:hover {
