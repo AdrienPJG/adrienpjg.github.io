@@ -32,6 +32,14 @@ jobs:
       - name: Compile SCSS to CSS in public/css/
         run: sass scss/styles.scss public/css/styles.css
 
+      - name: Compiled CSS Commit and push
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          git add public/css/styles.css
+          git commit -m "Compile SCSS via GitHub Actions" || echo "Aucune modif"
+          git push
+
       - name: Upload public folder for GitHub Pages
         uses: actions/upload-pages-artifact@v3
         with:
