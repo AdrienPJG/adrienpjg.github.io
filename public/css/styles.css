@@ -25,15 +25,17 @@ header nav ul {
   align-items: center;
   list-style: none;
   background-color: white;
+  gap: 1.5rem;
 }
 header nav ul li {
   color: black;
   text-decoration: none;
   padding-inline: 8%;
   padding-block: 1rem;
+  transition: all 0.4s ease-in-out 0.2s;
 }
 header nav ul li:hover {
-  background-color: #939B9C;
+  background-color: #E0E2E6;
   color: #38B6FF;
 }
 
@@ -41,6 +43,7 @@ main {
   max-width: 1000px;
   margin: 0 auto;
   padding: 1rem;
+  flex: 1;
 }
 main section {
   background-color: white;
@@ -56,8 +59,8 @@ main h2 {
 
 footer {
   text-align: center;
-  padding: 1rem;
-  background-color: #ffffff;
+  padding: 0.2rem;
+  background-color: #FFFFFF;
   color: #666;
   margin-top: 2rem;
 }
