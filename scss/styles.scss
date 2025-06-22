@@ -1,7 +1,7 @@
 // Var  
 $primary-color: #004AAD; //Bleu cobalt
 $secondary-color: #38B6FF; //Bleu clair
-$tertiary-color: #939B9C; //Gris 
+$tertiary-color: #E0E2E6; //Gris clair
 $text-color: #FFFFFF;
 $font-stack: 'Verdana', sans-serif;
 
@@ -51,12 +51,15 @@ header {
     @include center();
     list-style: none;
     background-color: white;
+    gap: 1.5rem;
 
     li {
       color: black;
       text-decoration: none;
       padding-inline: 8%;
       padding-block: 1rem;
+      transition: all 0.4s ease-in-out 0.2s;
+
       &:hover {
         background-color: $tertiary-color;
         color: $secondary-color;
@@ -67,7 +70,7 @@ header {
 
 main {
   @include container;
-
+  flex:1;
   section {
     background-color: white;
     padding: 2rem;
@@ -84,8 +87,8 @@ main {
 
 footer {
   text-align: center;
-  padding: 1rem;
-  background-color: #ffffff;
+  padding: 0.2rem;
+  background-color: #FFFFFF;
   color: #666;
   margin-top: 2rem;
 }
