@@ -17,12 +17,12 @@
           data: generateData(currentFactor),
           borderColor: 'blue',
           borderWidth: 2,
-          fill: true
+          fill: false
         }]
       },
       options: {
         responsive: true,
-        animation: true
+        animation: false
       }
     });
 
