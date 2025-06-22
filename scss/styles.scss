@@ -1,7 +1,7 @@
 // Var 
 $primary-color: #004AAD; //Bleu cobalt
 $secondary-color: #38B6FF; //Bleu clair
-$tertiary-color: #F6F6F6; //Gris clair
+$tertiary-color: #939B9C; //Gris 
 $text-color: #FFFFFF;
 $font-stack: 'Verdana', sans-serif;
 
@@ -41,7 +41,6 @@ body {
 header {
   background-color: $primary-color;
   color: white;
-  padding: 1rem 0;
 
   h1 {
     text-align: center;
@@ -49,17 +48,17 @@ header {
   }
 
   nav ul {
-    @include space-evenly();
+    @include center();
     list-style: none;
-    gap: 1.5rem;
     background-color: white;
 
-    li a {
+    li {
       color: black;
       text-decoration: none;
-
+      padding-inline: 8%;
+      padding-block: 1rem;
       &:hover {
-        background-color: #F6F6F6;
+        background-color: $tertiary-color;
         color: $secondary-color;
       }
     }
