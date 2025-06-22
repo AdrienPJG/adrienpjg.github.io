@@ -1,4 +1,4 @@
-const ctx = document.getElementById('myChart').getContext('2d');
+    const ctx = document.getElementById('myChart').getContext('2d');
     const influenceSlider = document.getElementById('influence');
     const valueDisplay = document.getElementById('valueDisplay');
 
@@ -13,16 +13,16 @@ const ctx = document.getElementById('myChart').getContext('2d');
       data: {
         labels: Array.from({ length: 10 }, (_, i) => `T${i + 1}`),
         datasets: [{
-          label: 'Données dynamiques',
+          label: 'Dynamic data',
           data: generateData(currentFactor),
           borderColor: 'blue',
           borderWidth: 2,
-          fill: false
+          fill: true
         }]
       },
       options: {
         responsive: true,
-        animation: false
+        animation: true
       }
     });
 
