@@ -57,18 +57,20 @@ header {
     gap: 1.5rem;
 
     li {
-      color: black;
       padding-inline: 8%;
       padding-block: 1rem;
       transition: all 0.4s ease-in-out 0.2s;
 
       a {
+        color: black;
         text-decoration: none;
       }
 
       &:hover {
         background-color: $tertiary-color;
-        color: $secondary-color;
+        a{
+          color: $secondary-color;
+        }
       }
     }
   }
@@ -112,16 +114,16 @@ footer {
     justify-items: center;
     list-style: none;
     li {
-      color: black;
       padding-inline: 8%;
       padding-block: 1rem;
       transition: all 0.4s ease-in-out 0.2s;
 
       a {
+        color: black;
         text-decoration: none;
       
         &:hover {
-          color: $secondary-color;
+          color: $primary-color;
         } 
       }
     }
