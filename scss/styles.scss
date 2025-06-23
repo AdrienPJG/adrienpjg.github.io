@@ -103,3 +103,25 @@ footer {
   color: #666;
   margin-top: 2rem;
 }
+
+.contact {
+  margin-block: 2vh;
+  ul {
+    @include center();
+    list-style: none;
+    li {
+      color: black;
+      padding-inline: 8%;
+      padding-block: 1rem;
+      transition: all 0.4s ease-in-out 0.2s;
+
+      a {
+        text-decoration: none;
+      
+        &:hover {
+          color: $secondary-color;
+        } 
+      }
+    }
+  }
+}
