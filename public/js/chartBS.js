@@ -7,11 +7,19 @@ window.onload = function () {
         {
             label: 'Prix du sous-jacent (€)',
             data: [],
-            borderColor: 'blue',
             segment: {
             borderColor: ctx => {
-                if (!ctx.segment) return 'gray';
-                return 'green';
+                const segment = ctx.segment;
+                if (!segment || !segment.p0 || !segment.p1) {
+                return 'gray'; // valeur par défaut si on n’a pas de segment
+                }
+                else{
+                const delta = segment.p1.parsed.y - segment.p0.parsed.y;
+                const intensity = Math.min(Math.abs(delta) / 5, 1);
+                return delta > 0
+                ? `rgba(0, 0, 255, ${0.2 + 0.8 * intensity})`
+                : `rgba(255, 0, 0, ${0.2 + 0.8 * intensity})`;
+                }
             }
             },
             fill: false,
