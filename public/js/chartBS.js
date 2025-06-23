@@ -65,7 +65,7 @@
       const newValue = parseFloat((lastValue + variation).toFixed(2));
 
       data.labels.push(`${time}s`);
-      data.datasets[0].data.push(newValue);
+      data.datasets[0].data.push({ x: time, y: newValue });
       time += 5;
 
       if (data.labels.length > 10) {
