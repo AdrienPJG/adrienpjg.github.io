@@ -9,7 +9,6 @@ window.onload = function () {
             data: [],
             borderColor: 'blue',
             segment: {
-            segment: {
             borderColor: ctx => {
                 if (!ctx.segment) return 'gray';
                 return 'green';
