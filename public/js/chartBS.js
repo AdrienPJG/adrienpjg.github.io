@@ -83,4 +83,4 @@ function addNewDataPoint() {
     callChart.update();
 }
 
-setInterval(addNewDataPoint, 5000);
+setInterval(addNewDataPoint, 1000);
