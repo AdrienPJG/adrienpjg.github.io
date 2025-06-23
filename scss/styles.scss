@@ -36,6 +36,8 @@ body {
   color: $text-color;
   background-color: $secondary-color;
   line-height: 1.6;
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
 }
 
@@ -107,7 +109,7 @@ footer {
 .contact {
   margin-block: 2vh;
   ul {
-    @include center();
+    justify-items: center;
     list-style: none;
     li {
       color: black;
