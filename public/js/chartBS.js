@@ -1,4 +1,4 @@
-const ctx = document.getElementById('chart').getContext('2d');
+const ctx = document.getElementById('callChart').getContext('2d');
     const callPriceDisplay = document.getElementById('callPrice');
 
     const data = {
