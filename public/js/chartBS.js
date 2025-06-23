@@ -9,17 +9,10 @@ window.onload = function () {
             data: [],
             borderColor: 'blue',
             segment: {
+            segment: {
             borderColor: ctx => {
-                const segment = ctx.segment;
-                if (!segment || !segment.p0 || !segment.p1) {
-                return 'gray';
-                }
-
-                const delta = segment.p1.parsed.y - segment.p0.parsed.y;
-                const intensity = Math.min(Math.abs(delta) / 5, 1);
-                return delta > 0
-                ? `rgba(0, 0, 255, ${0.2 + 0.8 * intensity})`
-                : `rgba(255, 0, 0, ${0.2 + 0.8 * intensity})`;
+                if (!ctx.segment) return 'gray';
+                return 'green';
             }
             },
             fill: false,
