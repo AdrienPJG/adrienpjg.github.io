@@ -100,7 +100,7 @@ window.onload = function () {
         data.datasets[0].data.push({ x: time, y: S });
         time += 1;
 
-        if (data.datasets[0].data.length > 10) {
+        if (data.datasets[0].data.length > 20) {
         data.datasets[0].data.shift();
         }
 
