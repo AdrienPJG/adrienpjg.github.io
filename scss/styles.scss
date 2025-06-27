@@ -56,16 +56,21 @@ header {
     background-color: white;
     gap: 1.5rem;
 
-    li a {
+    li {
       padding-inline: 8%;
       padding-block: 1rem;
       transition: all 0.4s ease-in-out 0.2s;
-      color: black;
-      text-decoration: none;
+
+      a {
+        color: black;
+        text-decoration: none;
+      }
 
       &:hover {
         background-color: $tertiary-color;
-        color: $secondary-color;
+        a{
+          color: $secondary-color;
+        }
       }
     }
   }
