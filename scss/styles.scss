@@ -171,18 +171,20 @@ footer {
         font-size: 1.5rem;
         color: #0073b1; 
 
-      &:hover {
-        background: #e0e0e0;
-        transform: translateY(-3px);
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-      }
+        &:hover {
+          background: #e0e0e0;
+          transform: translateY(-3px);
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
 
-      &:nth-child(2) i {
-        color: #333;
+        &:nth-child(2) i {
+          color: #333;
 
-      &:first-child i {
-        color: #c23a2b;
-      }
+          &:first-child i {
+            color: #c23a2b;
+          }
+        }
+      }  
     }
   }
 }
