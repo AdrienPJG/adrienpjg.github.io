@@ -30,19 +30,15 @@ header nav ul {
   background-color: white;
   gap: 1.5rem;
 }
-header nav ul li {
+header nav ul li a {
   padding-inline: 8%;
   padding-block: 1rem;
   transition: all 0.4s ease-in-out 0.2s;
-}
-header nav ul li a {
   color: black;
   text-decoration: none;
 }
-header nav ul li:hover {
+header nav ul li a:hover {
   background-color: #E0E2E6;
-}
-header nav ul li:hover a {
   color: #38B6FF;
 }
 
