@@ -101,10 +101,10 @@ footer {
 }
 
 .contact {
-  margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 80vh;
 }
 
 .contact-container {
@@ -141,14 +141,14 @@ footer {
   color: #333;
   transition: all 0.3s ease;
 }
-.contact-container .contact-links .contact-card i {
-  font-size: 1.5rem;
-  color: #0073b1;
-}
-.contact-container .contact-links .contact-card i:hover {
+.contact-container .contact-links .contact-card:hover {
   background: #e0e0e0;
   transform: translateY(-3px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.contact-container .contact-links .contact-card i {
+  font-size: 1.5rem;
+  color: #0073b1;
 }
 .contact-container .contact-links .contact-card i:nth-child(2) i {
   color: #333;
