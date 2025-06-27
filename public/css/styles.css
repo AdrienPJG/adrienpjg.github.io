@@ -31,11 +31,11 @@ header nav ul {
   gap: 1.5rem;
 }
 header nav ul li {
-  padding-inline: 8%;
-  padding-block: 1rem;
   transition: all 0.4s ease-in-out 0.2s;
 }
 header nav ul li a {
+  padding-inline: 5rem;
+  padding-block: 1rem;
   color: black;
   text-decoration: none;
 }
@@ -97,6 +97,12 @@ footer {
 }
 .contact ul li a:hover {
   color: #004AAD;
+}
+
+@media (max-width: 700px) {
+  header nav ul li a {
+    padding-inline: 2rem;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
