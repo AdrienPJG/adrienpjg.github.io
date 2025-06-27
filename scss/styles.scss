@@ -60,6 +60,7 @@ header {
       transition: all 0.4s ease-in-out 0.2s;
 
       a {
+        display: inline-block;
         padding-inline: 5rem;
         padding-block: 1rem;
         color: black;
@@ -136,6 +137,14 @@ footer {
 
   header nav ul li a {
     padding-inline: 2rem;
+  }
+
+}
+
+@media (max-width: 450px) {
+
+  header nav ul li a {
+    padding-inline: 0.5rem;
   }
 
 }
