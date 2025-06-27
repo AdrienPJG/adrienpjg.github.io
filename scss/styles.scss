@@ -131,6 +131,14 @@ footer {
   }
 }
 
+.contact {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  //min-height: 100vh;
+}
+
 .contact-container {
   background: white;
   padding: 3rem 2rem;
