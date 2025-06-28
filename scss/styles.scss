@@ -182,15 +182,13 @@ footer {
       i {
         font-size: 1.5rem;
         color: #0073b1; 
-
-        &:nth-child(2) i {
-          color: #333;
-
-          &:first-child i {
-            color: #c23a2b;
-          }
-        }
-      }  
+      }
+      &:nth-child(2) i {
+        color: #333;
+      }
+      &:first-child i {
+        color: #c23a2b;
+      } 
     }
   }
 }
