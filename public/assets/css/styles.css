@@ -183,6 +183,10 @@ footer {
   border: 4px solid #ddd;
 }
 
+.bio {
+  margin-inline: 10%;
+  margin-block: 3rem;
+}
 .bio h1 {
   font-size: 1.8rem;
   color: #333;
